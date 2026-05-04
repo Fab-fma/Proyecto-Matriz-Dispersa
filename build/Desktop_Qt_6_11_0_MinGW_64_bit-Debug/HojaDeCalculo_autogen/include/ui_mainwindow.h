@@ -38,6 +38,8 @@ public:
     QPushButton *btnEliminarColumna;
     QPushButton *btnEliminarRango;
     QLabel *labelValorCelda;
+    QLineEdit *lineEditIrA;
+    QPushButton *btnIrA;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -68,16 +70,22 @@ public:
         spinBoxFila->setGeometry(QRect(321, 450, 71, 31));
         lineEditColumna = new QLineEdit(centralwidget);
         lineEditColumna->setObjectName("lineEditColumna");
-        lineEditColumna->setGeometry(QRect(330, 500, 113, 24));
+        lineEditColumna->setGeometry(QRect(320, 490, 113, 24));
         btnEliminarColumna = new QPushButton(centralwidget);
         btnEliminarColumna->setObjectName("btnEliminarColumna");
-        btnEliminarColumna->setGeometry(QRect(449, 500, 101, 24));
+        btnEliminarColumna->setGeometry(QRect(440, 490, 101, 24));
         btnEliminarRango = new QPushButton(centralwidget);
         btnEliminarRango->setObjectName("btnEliminarRango");
         btnEliminarRango->setGeometry(QRect(170, 490, 91, 24));
         labelValorCelda = new QLabel(centralwidget);
         labelValorCelda->setObjectName("labelValorCelda");
         labelValorCelda->setGeometry(QRect(530, 450, 131, 20));
+        lineEditIrA = new QLineEdit(centralwidget);
+        lineEditIrA->setObjectName("lineEditIrA");
+        lineEditIrA->setGeometry(QRect(270, 530, 113, 24));
+        btnIrA = new QPushButton(centralwidget);
+        btnIrA->setObjectName("btnIrA");
+        btnIrA->setGeometry(QRect(180, 530, 80, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -101,6 +109,7 @@ public:
         btnEliminarColumna->setText(QCoreApplication::translate("MainWindow", "Eliminar Columna", nullptr));
         btnEliminarRango->setText(QCoreApplication::translate("MainWindow", "Eliminar Rango", nullptr));
         labelValorCelda->setText(QCoreApplication::translate("MainWindow", "_", nullptr));
+        btnIrA->setText(QCoreApplication::translate("MainWindow", "Ir A", nullptr));
     } // retranslateUi
 
 };

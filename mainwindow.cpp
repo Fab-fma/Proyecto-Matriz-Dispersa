@@ -9,18 +9,30 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // 1. Configurar tamaño inicial de la tabla visual (ej. 20x20)
-    ui->tableWidget->setRowCount(20);
-    ui->tableWidget->setColumnCount(20);
+    // 1. Configurar tamaño inicial de la tabla visual
+    int totalFilas = 1000;
+    int totalColumnas = 702; // 702 columnas equivale exactamente hasta la columna "ZZ"
+
+    ui->tableWidget->setRowCount(totalFilas);
+    ui->tableWidget->setColumnCount(totalColumnas);
+
+    // Generar nombres de columnas al estilo Excel (A, B... Z, AA, AB... ZZ)
     QStringList headers;
-    for (int i = 0; i < 26; ++i) {
-        headers << QString(QChar('A' + i)); // Genera A, B, C... Z
+    for (int i = 0; i < totalColumnas; ++i) {
+        QString colName = "";
+        int temp = i;
+        while (temp >= 0) {
+            colName.prepend(QChar('A' + (temp % 26)));
+            temp = (temp / 26) - 1;
+        }
+        headers << colName;
     }
     ui->tableWidget->setHorizontalHeaderLabels(headers);
 
     // 2. Conectar la tabla: cada vez que se edita una celda, llama a onCellChanged
     connect(ui->tableWidget, &QTableWidget::cellChanged, this, &MainWindow::onCellChanged);
     connect(ui->tableWidget, &QTableWidget::cellClicked, this, &MainWindow::onCellClicked);
+    connect(ui->tableWidget, &QTableWidget::itemSelectionChanged, this, &MainWindow::onSelectionChanged);
 }
 
 MainWindow::~MainWindow() {
@@ -109,6 +121,33 @@ void MainWindow::on_btnEliminarColumna_clicked() {
     }
 }
 
+// Auto-rellena el texto del rango cuando seleccionas con el ratón
+void MainWindow::onSelectionChanged() {
+    QList<QTableWidgetSelectionRange> rangos = ui->tableWidget->selectedRanges();
+    if (rangos.isEmpty()) return;
+
+    int r1 = rangos.first().topRow();
+    int c1 = rangos.first().leftColumn();
+    int r2 = rangos.first().bottomRow();
+    int c2 = rangos.first().rightColumn();
+
+    // Función lambda rápida para convertir número a letra (0 -> A, 26 -> AA)
+    auto colToLetra = [](int c) {
+        QString res = "";
+        while (c >= 0) {
+            res.prepend(QChar('A' + (c % 26)));
+            c = (c / 26) - 1;
+        }
+        return res;
+    };
+
+    // Arma el texto final (ej. "A1:C3")
+    QString texto = colToLetra(c1) + QString::number(r1 + 1) + ":" + colToLetra(c2) + QString::number(r2 + 1);
+
+    // Lo escribe en tu cajita de texto
+    ui->lineEditRango->setText(texto);
+}
+
 // 2. ELIMINAR RANGO
 void MainWindow::on_btnEliminarRango_clicked() {
     QString texto = ui->lineEditRango->text().toUpper(); // Ej: "A1:C3"
@@ -153,3 +192,20 @@ void MainWindow::on_btnCalcularTodo_clicked() {
 
     ui->labelResultado->setText(resultado);
 }
+
+// Salta visualmente a la celda escrita
+void MainWindow::on_btnIrA_clicked() {
+    QString ref = ui->lineEditIrA->text().toUpper(); // Ej: "ZZ500"
+    if (ref.isEmpty()) return;
+
+    int r, c;
+    // Usamos el traductor de tu backend que ya funciona perfecto
+    sheet.parseCellRef(ref.toStdString(), r, c);
+
+    // Verificamos que no te pida una celda fuera de los límites visuales
+    if (r >= 0 && r < ui->tableWidget->rowCount() && c >= 0 && c < ui->tableWidget->columnCount()) {
+        // Esta sola línea de Qt hace que la tabla haga scroll mágico hasta esa celda
+        ui->tableWidget->setCurrentCell(r, c);
+    }
+}
+

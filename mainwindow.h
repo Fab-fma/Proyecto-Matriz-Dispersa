@@ -24,6 +24,9 @@ private slots:
     void on_btnEliminarRango_clicked();
     void on_btnCalcularTodo_clicked();
     void onCellClicked(int row, int col);
+    void onSelectionChanged();
+
+    void on_btnIrA_clicked();
 
 private:
     Ui::MainWindow *ui;
