@@ -1,0 +1,3 @@
+C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\HojaDeCalculo.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\HojaDeCalculo.dir/objects.a @CMakeFiles\HojaDeCalculo.dir\objects1.rsp
+C:\Qt\Tools\mingw1310_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\HojaDeCalculo.dir/objects.a -Wl,--no-whole-archive -o HojaDeCalculo.exe -Wl,--out-implib,libHojaDeCalculo.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\HojaDeCalculo.dir\linkLibs.rsp
