@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // 2. Conectar la tabla: cada vez que se edita una celda, llama a onCellChanged
     connect(ui->tableWidget, &QTableWidget::cellChanged, this, &MainWindow::onCellChanged);
+    connect(ui->tableWidget, &QTableWidget::cellClicked, this, &MainWindow::onCellClicked);
 }
 
 MainWindow::~MainWindow() {
@@ -59,6 +60,25 @@ void MainWindow::onCellChanged(int row, int col) {
         sheet.insertarCelda(row, col, valor);
         colorearCelda(row, col, true);
     }
+}
+
+// Se ejecuta al hacer clic en una celda
+void MainWindow::onCellClicked(int row, int col) {
+    std::string crudo = sheet.consultarCelda(row, col);
+
+    if (crudo.empty()) {
+        ui->labelValorCelda->setText("Celda vacía");
+        return;
+    }
+
+    // Le pedimos al backend que evalúe la celda matemática
+    double valorEvaluado = sheet.evaluarCelda(row, col);
+
+    // Mostramos ambos valores
+    QString texto = "celda: " + QString::fromStdString(crudo) +
+                    "  |  valor: " + QString::number(valorEvaluado);
+
+    ui->labelValorCelda->setText(texto);
 }
 
 // Se ejecuta al dar clic en el botón "Eliminar Fila"
@@ -109,7 +129,7 @@ void MainWindow::on_btnEliminarRango_clicked() {
     }
 }
 
-// 3. CALCULAR SUMA (Y PROBAR FÓRMULAS)
+// 3. CALCULAR SUMA, PROMEDIO, MAX Y MIN
 void MainWindow::on_btnCalcularTodo_clicked() {
     QString texto = ui->lineEditRango->text().toUpper();
     if (!texto.contains(":")) return;
@@ -119,10 +139,17 @@ void MainWindow::on_btnCalcularTodo_clicked() {
     sheet.parseCellRef(partes[0].toStdString(), r1, c1);
     sheet.parseCellRef(partes[1].toStdString(), r2, c2);
 
-    // Aquí es donde brillan tus fórmulas. Si A1 tiene 10 y B1 tiene "=A1+5",
-    // la suma del rango A1:B1 dará 25.
+    // Llamamos a las 4 funciones de tu backend
     double suma = sheet.sumaRango(r1, c1, r2, c2);
+    double prom = sheet.promedioRango(r1, c1, r2, c2);
+    double max = sheet.maximoRango(r1, c1, r2, c2);
+    double min = sheet.minimoRango(r1, c1, r2, c2);
 
-    ui->labelResultado->setText("Suma del rango: " + QString::number(suma));
+    // Formateamos el texto con saltos de línea (\n)
+    QString resultado = "Suma: " + QString::number(suma) + "\n" +
+                        "Promedio: " + QString::number(prom) + "\n" +
+                        "Máximo: " + QString::number(max) + "\n" +
+                        "Mínimo: " + QString::number(min);
+
+    ui->labelResultado->setText(resultado);
 }
-

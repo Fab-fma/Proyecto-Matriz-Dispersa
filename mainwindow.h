@@ -23,6 +23,7 @@ private slots:
     void on_btnEliminarColumna_clicked();
     void on_btnEliminarRango_clicked();
     void on_btnCalcularTodo_clicked();
+    void onCellClicked(int row, int col);
 
 private:
     Ui::MainWindow *ui;

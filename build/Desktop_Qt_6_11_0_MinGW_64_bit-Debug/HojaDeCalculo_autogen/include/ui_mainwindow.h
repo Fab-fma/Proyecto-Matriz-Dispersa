@@ -37,6 +37,7 @@ public:
     QLineEdit *lineEditColumna;
     QPushButton *btnEliminarColumna;
     QPushButton *btnEliminarRango;
+    QLabel *labelValorCelda;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -64,7 +65,7 @@ public:
         tableWidget->setGeometry(QRect(20, 10, 761, 421));
         spinBoxFila = new QSpinBox(centralwidget);
         spinBoxFila->setObjectName("spinBoxFila");
-        spinBoxFila->setGeometry(QRect(331, 450, 61, 25));
+        spinBoxFila->setGeometry(QRect(321, 450, 71, 31));
         lineEditColumna = new QLineEdit(centralwidget);
         lineEditColumna->setObjectName("lineEditColumna");
         lineEditColumna->setGeometry(QRect(330, 500, 113, 24));
@@ -74,6 +75,9 @@ public:
         btnEliminarRango = new QPushButton(centralwidget);
         btnEliminarRango->setObjectName("btnEliminarRango");
         btnEliminarRango->setGeometry(QRect(170, 490, 91, 24));
+        labelValorCelda = new QLabel(centralwidget);
+        labelValorCelda->setObjectName("labelValorCelda");
+        labelValorCelda->setGeometry(QRect(530, 450, 131, 20));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -96,6 +100,7 @@ public:
         labelResultado->setText(QCoreApplication::translate("MainWindow", "Rango:", nullptr));
         btnEliminarColumna->setText(QCoreApplication::translate("MainWindow", "Eliminar Columna", nullptr));
         btnEliminarRango->setText(QCoreApplication::translate("MainWindow", "Eliminar Rango", nullptr));
+        labelValorCelda->setText(QCoreApplication::translate("MainWindow", "_", nullptr));
     } // retranslateUi
 
 };

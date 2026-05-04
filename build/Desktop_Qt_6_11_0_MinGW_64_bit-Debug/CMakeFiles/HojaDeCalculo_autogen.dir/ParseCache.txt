@@ -493,6 +493,6 @@ C:/Users/main/Documents/HojaDeCalculo/mainwindow.h
  mdp:C:/Users/main/Documents/HojaDeCalculo/Spreadsheet.h
  mdp:C:/Users/main/Documents/HojaDeCalculo/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/HojaDeCalculo_autogen/moc_predefs.h
  mdp:C:/Users/main/Documents/HojaDeCalculo/mainwindow.h
+C:/Users/main/Documents/HojaDeCalculo/main.cpp
 C:/Users/main/Documents/HojaDeCalculo/mainwindow.cpp
  uic:ui_mainwindow.h
-C:/Users/main/Documents/HojaDeCalculo/main.cpp

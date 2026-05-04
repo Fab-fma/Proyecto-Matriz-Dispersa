@@ -245,6 +245,65 @@ public:
         return suma;
     }
 
+    double promedioRango(int r1, int c1, int r2, int c2) {
+        double suma = 0.0;
+        int count = 0;
+        for (int r = r1; r <= r2; ++r) {
+            if (r >= rowHeaders.size()) continue;
+            CellNode* actual = rowHeaders[r];
+            while (actual != nullptr && actual->col < c1) actual = actual->nextInRow;
+            while (actual != nullptr && actual->col <= c2) {
+                string val = actual->value;
+                if (!val.empty() && (isdigit(val[0]) || val[0] == '-' || val[0] == '=')) {
+                    suma += evaluarCelda(actual->row, actual->col);
+                    count++;
+                }
+                actual = actual->nextInRow;
+            }
+        }
+        return count > 0 ? suma / count : 0.0;
+    }
+
+    double maximoRango(int r1, int c1, int r2, int c2) {
+        double maximo = -numeric_limits<double>::infinity();
+        bool encontrado = false;
+        for (int r = r1; r <= r2; ++r) {
+            if (r >= rowHeaders.size()) continue;
+            CellNode* actual = rowHeaders[r];
+            while (actual != nullptr && actual->col < c1) actual = actual->nextInRow;
+            while (actual != nullptr && actual->col <= c2) {
+                string val = actual->value;
+                if (!val.empty() && (isdigit(val[0]) || val[0] == '-' || val[0] == '=')) {
+                    double v = evaluarCelda(actual->row, actual->col);
+                    if (v > maximo) maximo = v;
+                    encontrado = true;
+                }
+                actual = actual->nextInRow;
+            }
+        }
+        return encontrado ? maximo : 0.0;
+    }
+
+    double minimoRango(int r1, int c1, int r2, int c2) {
+        double minimo = numeric_limits<double>::infinity();
+        bool encontrado = false;
+        for (int r = r1; r <= r2; ++r) {
+            if (r >= rowHeaders.size()) continue;
+            CellNode* actual = rowHeaders[r];
+            while (actual != nullptr && actual->col < c1) actual = actual->nextInRow;
+            while (actual != nullptr && actual->col <= c2) {
+                string val = actual->value;
+                if (!val.empty() && (isdigit(val[0]) || val[0] == '-' || val[0] == '=')) {
+                    double v = evaluarCelda(actual->row, actual->col);
+                    if (v < minimo) minimo = v;
+                    encontrado = true;
+                }
+                actual = actual->nextInRow;
+            }
+        }
+        return encontrado ? minimo : 0.0;
+    }
+
 };
 
 #endif // SPREADSHEET_H
