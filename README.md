@@ -315,3 +315,98 @@ double minimoRango(int r1, int c1, int r2, int c2) {
     return encontrado ? minimo : 0.0;
 }
 ```
+## 3. Análisis de Complejidad
+
+### 3.1. Estructura de datos y justificación
+La implementación de `Spreadsheet.h` usa una estructura de matriz dispersa basada en listas enlazadas cruzadas.
+
+- Cada nodo `CellNode` contiene:
+  - `int row`
+  - `int col`
+  - `string value`
+  - `CellNode* nextInRow`
+  - `CellNode* nextInCol`
+- Hay dos vectores de cabeceras:
+  - `rowHeaders[r]` apunta al primer nodo de la fila `r`
+  - `colHeaders[c]` apunta al primer nodo de la columna `c`
+
+Esta organización es equivalente a una lista doblemente enlazada en el sentido de que cada celda se enlaza en dos dimensiones: por fila y por columna. Aunque no existe un puntero `prev` explícito, la estructura mantiene enlaces bidireccionales lógicos porque cada nodo participa en dos listas independientes.
+
+### 3.2. Complejidad por función
+
+- `expandirCabeceras(int maxRow, int maxCol)`
+  - Complejidad: `O(maxRow + maxCol)` en el peor caso.
+  - Justificación: redimensiona los vectores de cabeceras hasta el índice requerido.
+
+- `getPrevInRow(int row, int col)`
+  - Complejidad: `O(k_row)`.
+  - Justificación: recorre los nodos de la fila `row` hasta encontrar el nodo anterior a la columna `col`.
+
+- `getPrevInCol(int row, int col)`
+  - Complejidad: `O(k_col)`.
+  - Justificación: recorre los nodos de la columna `col` hasta encontrar el nodo anterior a la fila `row`.
+
+- `parseCellRef(const string& ref, int& row, int& col)`
+  - Complejidad: `O(|ref|)`.
+  - Justificación: convierte una referencia tipo `A1` a índices numéricos.
+
+- `parseOperand(const string& op)`
+  - Complejidad: `O(|op| + costRef)`.
+  - Justificación: analiza un operando, que puede ser un número o una referencia a otra celda. Si es referencia, llama a `evaluarCelda`.
+
+- `evaluarFormula(const string& formula)`
+  - Complejidad: `O(|formula| + costOperands)`.
+  - Justificación: busca el operador y evalúa operandos numéricos o referencias.
+
+- `insertarCelda(int row, int col, const string& valor)`
+  - Complejidad: `O(k_row + k_col)`.
+  - Justificación: busca la posición en la fila, crea el nodo y enlaza en fila y columna. Con `k = max(k_row, k_col)`, cumple `O(k)`.
+
+- `consultarCelda(int row, int col)`
+  - Complejidad: `O(k_row)`.
+  - Justificación: recorre la lista de la fila `row` hasta hallar la columna deseada o superarla.
+
+- `evaluarCelda(int row, int col)`
+  - Complejidad: `O(k_row + costFormula)`.
+  - Justificación: obtiene el valor de la celda y, si es fórmula, evalúa la expresión.
+
+- `eliminarCelda(int row, int col)`
+  - Complejidad: `O(k_row + k_col)`.
+  - Justificación: localiza y elimina el nodo en la fila y actualiza el enlace correspondiente en la columna.
+
+- `eliminarFila(int row)`
+  - Complejidad: `O(t * k)` donde `t` es el número de celdas en la fila.
+  - Justificación: recorre todos los nodos de la fila y elimina cada celda con `eliminarCelda`, lo que vuelve a recorrer las columnas relacionadas.
+
+- `eliminarColumna(int col)`
+  - Complejidad: `O(t * k)` donde `t` es el número de celdas en la columna.
+  - Justificación: recorre la columna y elimina cada celda con `eliminarCelda`, volviendo a recorrer las filas relacionadas.
+
+- `eliminarRango(int r1, int c1, int r2, int c2)`
+  - Complejidad: `O(r * k + d * k)` donde `r` es el número de filas recorridas y `d` el número de celdas eliminadas.
+  - Justificación: para cada fila se recopilan columnas dentro del rango y luego se eliminan celdas individualmente.
+
+- `sumaRango(int r1, int c1, int r2, int c2)`
+  - Complejidad: `O(k_total)`.
+  - Justificación: recorre solo las celdas no vacías relevantes dentro del rango.
+
+- `promedioRango(int r1, int c1, int r2, int c2)`
+  - Complejidad: `O(k_total)`.
+  - Justificación: igual que `sumaRango`, sumando valores y contando celdas válidas.
+
+- `maximoRango(int r1, int c1, int r2, int c2)`
+  - Complejidad: `O(k_total)`.
+  - Justificación: recorre las celdas del rango y actualiza el máximo encontrado.
+
+- `minimoRango(int r1, int c1, int r2, int c2)`
+  - Complejidad: `O(k_total)`.
+  - Justificación: recorre las celdas del rango y actualiza el mínimo encontrado.
+
+### 3.3. Justificación clara de la elección
+
+Usar listas enlazadas cruzadas es una elección adecuada para matrices dispersas porque:
+
+1. Solo almacena celdas no vacías, evitando la sobrecarga de memoria de una matriz densa.
+2. Permite recorrer eficientemente por filas y por columnas sin visitar celdas vacías.
+3. La operación sobre una celda individual (inserción, búsqueda o eliminación) se limita a la fila y columna activas, lo que da un costo `O(k)`.
+4. Para funciones de agregación y rango, la estructura permite saltar directamente a las celdas presentes dentro de los límites dados.
