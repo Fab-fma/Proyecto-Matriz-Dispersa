@@ -52,10 +52,10 @@ RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\main\Documents\HojaDeCalculo
+CMAKE_SOURCE_DIR = C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
+CMAKE_BINARY_DIR = C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/HojaDeCalculo.dir/depend.make
@@ -71,54 +71,54 @@ include CMakeFiles/HojaDeCalculo.dir/flags.make
 HojaDeCalculo_autogen/timestamp: C:/Qt/6.11.0/mingw_64/bin/moc.exe
 HojaDeCalculo_autogen/timestamp: C:/Qt/6.11.0/mingw_64/bin/uic.exe
 HojaDeCalculo_autogen/timestamp: CMakeFiles/HojaDeCalculo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target HojaDeCalculo"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/Users/main/Documents/HojaDeCalculo/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/HojaDeCalculo_autogen.dir/AutogenInfo.json Debug
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/Users/main/Documents/HojaDeCalculo/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/HojaDeCalculo_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target HojaDeCalculo"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/CMakeFiles/HojaDeCalculo_autogen.dir/AutogenInfo.json Debug
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/HojaDeCalculo_autogen/timestamp
 
 CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj: CMakeFiles/HojaDeCalculo.dir/flags.make
 CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj: CMakeFiles/HojaDeCalculo.dir/includes_CXX.rsp
 CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj: HojaDeCalculo_autogen/mocs_compilation.cpp
 CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj: CMakeFiles/HojaDeCalculo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\HojaDeCalculo.dir\HojaDeCalculo_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\HojaDeCalculo.dir\HojaDeCalculo_autogen\mocs_compilation.cpp.obj -c C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\HojaDeCalculo_autogen\mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\HojaDeCalculo.dir\HojaDeCalculo_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\HojaDeCalculo.dir\HojaDeCalculo_autogen\mocs_compilation.cpp.obj -c C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\HojaDeCalculo_autogen\mocs_compilation.cpp
 
 CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\HojaDeCalculo_autogen\mocs_compilation.cpp > CMakeFiles\HojaDeCalculo.dir\HojaDeCalculo_autogen\mocs_compilation.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\HojaDeCalculo_autogen\mocs_compilation.cpp > CMakeFiles\HojaDeCalculo.dir\HojaDeCalculo_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\HojaDeCalculo_autogen\mocs_compilation.cpp -o CMakeFiles\HojaDeCalculo.dir\HojaDeCalculo_autogen\mocs_compilation.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\HojaDeCalculo_autogen\mocs_compilation.cpp -o CMakeFiles\HojaDeCalculo.dir\HojaDeCalculo_autogen\mocs_compilation.cpp.s
 
 CMakeFiles/HojaDeCalculo.dir/main.cpp.obj: CMakeFiles/HojaDeCalculo.dir/flags.make
 CMakeFiles/HojaDeCalculo.dir/main.cpp.obj: CMakeFiles/HojaDeCalculo.dir/includes_CXX.rsp
-CMakeFiles/HojaDeCalculo.dir/main.cpp.obj: C:/Users/main/Documents/HojaDeCalculo/main.cpp
+CMakeFiles/HojaDeCalculo.dir/main.cpp.obj: C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/main.cpp
 CMakeFiles/HojaDeCalculo.dir/main.cpp.obj: CMakeFiles/HojaDeCalculo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HojaDeCalculo.dir/main.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HojaDeCalculo.dir/main.cpp.obj -MF CMakeFiles\HojaDeCalculo.dir\main.cpp.obj.d -o CMakeFiles\HojaDeCalculo.dir\main.cpp.obj -c C:\Users\main\Documents\HojaDeCalculo\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HojaDeCalculo.dir/main.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HojaDeCalculo.dir/main.cpp.obj -MF CMakeFiles\HojaDeCalculo.dir\main.cpp.obj.d -o CMakeFiles\HojaDeCalculo.dir\main.cpp.obj -c C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\main.cpp
 
 CMakeFiles/HojaDeCalculo.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HojaDeCalculo.dir/main.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\main\Documents\HojaDeCalculo\main.cpp > CMakeFiles\HojaDeCalculo.dir\main.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\main.cpp > CMakeFiles\HojaDeCalculo.dir\main.cpp.i
 
 CMakeFiles/HojaDeCalculo.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HojaDeCalculo.dir/main.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\main\Documents\HojaDeCalculo\main.cpp -o CMakeFiles\HojaDeCalculo.dir\main.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\main.cpp -o CMakeFiles\HojaDeCalculo.dir\main.cpp.s
 
 CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj: CMakeFiles/HojaDeCalculo.dir/flags.make
 CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj: CMakeFiles/HojaDeCalculo.dir/includes_CXX.rsp
-CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj: C:/Users/main/Documents/HojaDeCalculo/mainwindow.cpp
+CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj: C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/mainwindow.cpp
 CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj: CMakeFiles/HojaDeCalculo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj -MF CMakeFiles\HojaDeCalculo.dir\mainwindow.cpp.obj.d -o CMakeFiles\HojaDeCalculo.dir\mainwindow.cpp.obj -c C:\Users\main\Documents\HojaDeCalculo\mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj -MF CMakeFiles\HojaDeCalculo.dir\mainwindow.cpp.obj.d -o CMakeFiles\HojaDeCalculo.dir\mainwindow.cpp.obj -c C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\mainwindow.cpp
 
 CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\main\Documents\HojaDeCalculo\mainwindow.cpp > CMakeFiles\HojaDeCalculo.dir\mainwindow.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\mainwindow.cpp > CMakeFiles\HojaDeCalculo.dir\mainwindow.cpp.i
 
 CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\main\Documents\HojaDeCalculo\mainwindow.cpp -o CMakeFiles\HojaDeCalculo.dir\mainwindow.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\mainwindow.cpp -o CMakeFiles\HojaDeCalculo.dir\mainwindow.cpp.s
 
 # Object files for target HojaDeCalculo
 HojaDeCalculo_OBJECTS = \
@@ -140,7 +140,7 @@ HojaDeCalculo.exe: C:/Qt/6.11.0/mingw_64/lib/libQt6EntryPoint.a
 HojaDeCalculo.exe: CMakeFiles/HojaDeCalculo.dir/linkLibs.rsp
 HojaDeCalculo.exe: CMakeFiles/HojaDeCalculo.dir/objects1.rsp
 HojaDeCalculo.exe: CMakeFiles/HojaDeCalculo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable HojaDeCalculo.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable HojaDeCalculo.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\HojaDeCalculo.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -152,6 +152,6 @@ CMakeFiles/HojaDeCalculo.dir/clean:
 .PHONY : CMakeFiles/HojaDeCalculo.dir/clean
 
 CMakeFiles/HojaDeCalculo.dir/depend: HojaDeCalculo_autogen/timestamp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\main\Documents\HojaDeCalculo C:\Users\main\Documents\HojaDeCalculo C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug C:\Users\main\Documents\HojaDeCalculo\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles\HojaDeCalculo.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\build\Desktop_Qt_6_11_0_MinGW_64_bit-Debug\CMakeFiles\HojaDeCalculo.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/HojaDeCalculo.dir/depend
 

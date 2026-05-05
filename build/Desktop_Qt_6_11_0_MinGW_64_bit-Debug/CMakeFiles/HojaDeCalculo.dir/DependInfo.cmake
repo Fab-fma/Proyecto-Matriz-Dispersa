@@ -9,9 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "HojaDeCalculo_autogen/timestamp" "custom" "HojaDeCalculo_autogen/deps"
-  "C:/Users/main/Documents/HojaDeCalculo/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/HojaDeCalculo_autogen/mocs_compilation.cpp" "CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj.d"
-  "C:/Users/main/Documents/HojaDeCalculo/main.cpp" "CMakeFiles/HojaDeCalculo.dir/main.cpp.obj" "gcc" "CMakeFiles/HojaDeCalculo.dir/main.cpp.obj.d"
-  "C:/Users/main/Documents/HojaDeCalculo/mainwindow.cpp" "CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj" "gcc" "CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj.d"
+  "C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/HojaDeCalculo_autogen/mocs_compilation.cpp" "CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/HojaDeCalculo.dir/HojaDeCalculo_autogen/mocs_compilation.cpp.obj.d"
+  "C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/main.cpp" "CMakeFiles/HojaDeCalculo.dir/main.cpp.obj" "gcc" "CMakeFiles/HojaDeCalculo.dir/main.cpp.obj.d"
+  "C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/mainwindow.cpp" "CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj" "gcc" "CMakeFiles/HojaDeCalculo.dir/mainwindow.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

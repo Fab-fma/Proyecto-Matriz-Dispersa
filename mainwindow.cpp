@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QTableWidgetItem>
 #include <QString>
+#include <QScrollBar>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,18 +17,24 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableWidget->setRowCount(totalFilas);
     ui->tableWidget->setColumnCount(totalColumnas);
 
+    // Llamamos a la función auxiliar para poner A, B, C...
+    actualizarCabecerasColumnas(totalColumnas);
+
     // Generar nombres de columnas al estilo Excel (A, B... Z, AA, AB... ZZ)
-    QStringList headers;
-    for (int i = 0; i < totalColumnas; ++i) {
-        QString colName = "";
-        int temp = i;
-        while (temp >= 0) {
-            colName.prepend(QChar('A' + (temp % 26)));
-            temp = (temp / 26) - 1;
+    connect(ui->tableWidget->verticalScrollBar(), &QScrollBar::valueChanged, this, [this](int value) {
+        if (value == ui->tableWidget->verticalScrollBar()->maximum()) {
+            ui->tableWidget->setRowCount(ui->tableWidget->rowCount() + 50); // Agrega 50 filas más
         }
-        headers << colName;
-    }
-    ui->tableWidget->setHorizontalHeaderLabels(headers);
+    });
+
+    // Detecta cuando el usuario va muy a la derecha y agrega más columnas
+    connect(ui->tableWidget->horizontalScrollBar(), &QScrollBar::valueChanged, this, [this](int value) {
+        if (value == ui->tableWidget->horizontalScrollBar()->maximum()) {
+            int nuevasCols = ui->tableWidget->columnCount() + 26; // Agrega 26 columnas más
+            ui->tableWidget->setColumnCount(nuevasCols);
+            actualizarCabecerasColumnas(nuevasCols); // Recalcula las letras
+        }
+    });
 
     // 2. Conectar la tabla: cada vez que se edita una celda, llama a onCellChanged
     connect(ui->tableWidget, &QTableWidget::cellChanged, this, &MainWindow::onCellChanged);
@@ -202,10 +209,45 @@ void MainWindow::on_btnIrA_clicked() {
     // Usamos el traductor de tu backend que ya funciona perfecto
     sheet.parseCellRef(ref.toStdString(), r, c);
 
-    // Verificamos que no te pida una celda fuera de los límites visuales
-    if (r >= 0 && r < ui->tableWidget->rowCount() && c >= 0 && c < ui->tableWidget->columnCount()) {
-        // Esta sola línea de Qt hace que la tabla haga scroll mágico hasta esa celda
-        ui->tableWidget->setCurrentCell(r, c);
+    // Si la celda pedida es mayor que el tamaño actual, expandimos la tabla
+    if (r >= ui->tableWidget->rowCount()) {
+        ui->tableWidget->setRowCount(r + 50);
     }
+    if (c >= ui->tableWidget->columnCount()) {
+        ui->tableWidget->setColumnCount(c + 26);
+        actualizarCabecerasColumnas(ui->tableWidget->columnCount());
+    }
+
+    ui->tableWidget->setCurrentCell(r, c);
 }
 
+// Implementación de la función auxiliar para las letras
+void MainWindow::actualizarCabecerasColumnas(int totalColumnas) {
+    QStringList headers;
+    for (int i = 0; i < totalColumnas; ++i) {
+        QString colName = "";
+        int temp = i;
+        while (temp >= 0) {
+            colName.prepend(QChar('A' + (temp % 26)));
+            temp = (temp / 26) - 1;
+        }
+        headers << colName;
+    }
+    ui->tableWidget->setHorizontalHeaderLabels(headers);
+}
+
+// Evento del botón para eliminar la celda seleccionada
+void MainWindow::on_btnEliminarCelda_clicked() {
+    // Obtenemos la celda en la que el usuario hizo clic
+    int r = ui->tableWidget->currentRow();
+    int c = ui->tableWidget->currentColumn();
+
+    if (r >= 0 && c >= 0) {
+        // Llama a tu función backend que ya hace el ajuste de punteros
+        sheet.eliminarCelda(r, c); 
+        
+        // Limpiamos visualmente la celda en la pantalla
+        colorearCelda(r, c, false); 
+        ui->labelValorCelda->setText("Celda vacía");
+    }
+}

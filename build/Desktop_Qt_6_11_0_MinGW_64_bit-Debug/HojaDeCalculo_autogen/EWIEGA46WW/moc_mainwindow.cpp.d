@@ -1,5 +1,5 @@
-C:/Users/main/Documents/HojaDeCalculo/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/HojaDeCalculo_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/main/Documents/HojaDeCalculo/mainwindow.h \
-  C:/Users/main/Documents/HojaDeCalculo/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/HojaDeCalculo_autogen/moc_predefs.h \
+C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/HojaDeCalculo_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/mainwindow.h \
+  C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug/HojaDeCalculo_autogen/moc_predefs.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/q20bit.h \
   C:/Qt/6.11.0/mingw_64/include/QtCore/q20functional.h \
@@ -488,4 +488,4 @@ C:/Users/main/Documents/HojaDeCalculo/build/Desktop_Qt_6_11_0_MinGW_64_bit-Debug
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
-  C:/Users/main/Documents/HojaDeCalculo/Spreadsheet.h
+  C:/Users/lucia/Downloads/aed/fabian/Proyecto-Matriz-Dispersa/Spreadsheet.h

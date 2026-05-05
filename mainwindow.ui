@@ -124,7 +124,7 @@
      <rect>
       <x>530</x>
       <y>450</y>
-      <width>131</width>
+      <width>241</width>
       <height>20</height>
      </rect>
     </property>
@@ -153,6 +153,19 @@
     </property>
     <property name="text">
      <string>Ir A</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEliminarCelda">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>520</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Eliminar Celda</string>
     </property>
    </widget>
   </widget>

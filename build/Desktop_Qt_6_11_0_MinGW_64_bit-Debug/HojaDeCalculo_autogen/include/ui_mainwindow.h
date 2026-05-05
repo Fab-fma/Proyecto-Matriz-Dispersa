@@ -40,6 +40,7 @@ public:
     QLabel *labelValorCelda;
     QLineEdit *lineEditIrA;
     QPushButton *btnIrA;
+    QPushButton *btnEliminarCelda;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -79,13 +80,16 @@ public:
         btnEliminarRango->setGeometry(QRect(170, 490, 91, 24));
         labelValorCelda = new QLabel(centralwidget);
         labelValorCelda->setObjectName("labelValorCelda");
-        labelValorCelda->setGeometry(QRect(530, 450, 131, 20));
+        labelValorCelda->setGeometry(QRect(530, 450, 241, 20));
         lineEditIrA = new QLineEdit(centralwidget);
         lineEditIrA->setObjectName("lineEditIrA");
         lineEditIrA->setGeometry(QRect(270, 530, 113, 24));
         btnIrA = new QPushButton(centralwidget);
         btnIrA->setObjectName("btnIrA");
         btnIrA->setGeometry(QRect(180, 530, 80, 24));
+        btnEliminarCelda = new QPushButton(centralwidget);
+        btnEliminarCelda->setObjectName("btnEliminarCelda");
+        btnEliminarCelda->setGeometry(QRect(440, 520, 91, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -110,6 +114,7 @@ public:
         btnEliminarRango->setText(QCoreApplication::translate("MainWindow", "Eliminar Rango", nullptr));
         labelValorCelda->setText(QCoreApplication::translate("MainWindow", "_", nullptr));
         btnIrA->setText(QCoreApplication::translate("MainWindow", "Ir A", nullptr));
+        btnEliminarCelda->setText(QCoreApplication::translate("MainWindow", "Eliminar Celda", nullptr));
     } // retranslateUi
 
 };

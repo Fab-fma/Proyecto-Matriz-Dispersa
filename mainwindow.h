@@ -25,13 +25,15 @@ private slots:
     void on_btnCalcularTodo_clicked();
     void onCellClicked(int row, int col);
     void onSelectionChanged();
-
     void on_btnIrA_clicked();
+
+    void on_btnEliminarCelda_clicked();
 
 private:
     Ui::MainWindow *ui;
     Spreadsheet sheet; // <-- Tu estructura de datos real
 
     void colorearCelda(int row, int col, bool ocupada);
+    void actualizarCabecerasColumnas(int totalColumnas);
 };
 #endif // MAINWINDOW_H

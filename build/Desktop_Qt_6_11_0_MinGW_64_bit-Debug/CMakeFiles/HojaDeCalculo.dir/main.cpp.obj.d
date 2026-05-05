@@ -1,6 +1,6 @@
 CMakeFiles/HojaDeCalculo.dir/main.cpp.obj: \
- C:\Users\main\Documents\HojaDeCalculo\main.cpp \
- C:\Users\main\Documents\HojaDeCalculo\mainwindow.h \
+ C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\main.cpp \
+ C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\mainwindow.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/QMainWindow \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qmainwindow.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -386,7 +386,7 @@ CMakeFiles/HojaDeCalculo.dir/main.cpp.obj: \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.11.0/mingw_64/include/QtGui/qbitmap.h \
  C:/Qt/6.11.0/mingw_64/include/QtWidgets/qtabwidget.h \
- C:\Users\main\Documents\HojaDeCalculo\Spreadsheet.h \
+ C:\Users\lucia\Downloads\aed\fabian\Proyecto-Matriz-Dispersa\Spreadsheet.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/stdc++.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cfloat \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/float.h \
